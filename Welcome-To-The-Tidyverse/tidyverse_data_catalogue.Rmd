@@ -1,0 +1,33 @@
+---
+title: "Welcome to the tidyverse - data catalogue"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Slide Example Data
+
+### Example 1 / Slide 6 / Your Turn 1
+
+"Your Turn 1" uses the mpg data and plots `displ` vs `hwy`.
+
+```{r}
+head(mpg)
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+Example uses mpg data, displ (continuous), hwy (continuous)
+
+-   mpg data of vehicle fuel efficiency
+
+-   `displ` is continuous
+
+-   `hwy` is continuous
+
+Aim is to show relationship between two continuous variables in a quick EDA plot and describe different elements of the `ggplot` and `geom_point` functions including `mapping` and `aes`.
